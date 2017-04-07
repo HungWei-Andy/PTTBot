@@ -11,7 +11,7 @@ class Config(object):
     max_timestep = 50
     input_size = 256
     intent_hidden_size = 100
-    label_hidden_size = 50
+    label_hidden_size = 200
     intent_epoch = 10
     label_epoch = 30
     batch_size = 256
@@ -79,7 +79,7 @@ def main():
     config = Config()
     intent_rnn = Sequential()
     intent_rnn.add(Embedding(voc_size, config.input_size))
-    intent_rnn.add(LSTM(config.intent_hidden_size))
+    intent_rnn.add(LSTM(config.intent_hidden_size, return_sequences=False))
     intent_rnn.add(Dense(intent_dict_size, activation='softmax'))
     intent_rnn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     print(X_train.shape, Y_intent_train.shape)
@@ -92,7 +92,7 @@ def main():
     label_rnn = Sequential()
     label_rnn.add(Embedding(voc_size, config.input_size))
     label_rnn.add(Bidirectional(LSTM(config.label_hidden_size, return_sequences=True)))
-    label_rnn.add(Dense(label_dict_size, activation='softmax'))
+    label_rnn.add(TimeDistributed(Dense(label_dict_size, activation='softmax')))
     label_rnn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     label_rnn.fit(X_train, Y_label_train,
         epochs=config.label_epoch, batch_size=config.batch_size, shuffle=True, validation_split=0.05)

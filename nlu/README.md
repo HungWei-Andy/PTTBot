@@ -13,6 +13,12 @@ It contains three modules:
 2. **Building RNN and training** - train_lm.py
 3. **Testing the trained RNN** - run.py
 
+## Prerequisite
+Please install h5py and keras before unnning the code.
+```
+$ pip install h5py keras
+```
+
 ## Training
 To train the network, run 'train.sh'.
 ```

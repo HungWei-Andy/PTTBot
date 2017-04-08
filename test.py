@@ -22,7 +22,8 @@ label_rnn = load_model('nlu/models/label_rnn.h5')
 #set database path
 DATABASE_PATH = 'kp/database/merged_file.json'
 kp = KnowledgeProvider(DATABASE_PATH)
-keyword_dict = {'爆':100,'紫爆':100,'紫':100,'西斯':'sex','八卦':'Gossiping','NBA':'NBA','JOKE':'joke'}
+keyword_dict = {'爆':100,'紫爆':100,'紫':100,'西斯':'sex','八卦':'Gossiping', 'gossiping': 'Gossiping', 'nba': 'NBA'
+               ,'NBA':'NBA','JOKE':'joke', 'lol': 'LOL'}
 
 #print(u'西斯')
 #print(str('西斯'))
@@ -59,7 +60,7 @@ try:
                 while (chs[i].isdigit() or chs[i].isalpha()) and i < len(chs):
                     word += chs[i]
                     i += 1
-                words.append(word)
+                words.append(word.lower())
             else:
                 word += chs[i]
                 word += chs[i + 1]

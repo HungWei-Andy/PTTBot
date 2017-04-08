@@ -1,2 +1,2 @@
-request_post
-request_board
+find_post
+find_board

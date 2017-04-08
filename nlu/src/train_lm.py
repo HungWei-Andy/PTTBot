@@ -16,7 +16,7 @@ class Config(object):
     intent_epoch = 10
     label_epoch = 20
     batch_size = 256
-    train_sample_num = 8200
+    train_sample_num = 8300
 
 def words2vec(words, word_to_ids):
     vec = []
@@ -93,7 +93,7 @@ def main():
     label_rnn = Sequential()
     label_rnn.add(Embedding(voc_size, config.input_size))
     label_rnn.add(Bidirectional(LSTM(config.label_hidden_size, return_sequences=True)))
-    label_rnn.add(TimeDistributed(Dense(label_dict_size, activation='softmax')))
+    label_rnn.add(Dense(label_dict_size, activation='softmax'))
     label_rnn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     label_rnn.fit(X_train, Y_label_train,
         epochs=config.label_epoch, batch_size=config.batch_size, shuffle=True, validation_split=0.05)

@@ -6,7 +6,7 @@ import os
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
 from keras.layers import Dense, Embedding, LSTM, Bidirectional
-from keras.layers.wrapper import TimeDistributed
+from keras.layers.wrappers import TimeDistributed
 
 class Config(object):
     max_timestep = 50

@@ -42,87 +42,87 @@ def keyword_translate(request, keyword_dict):
     return req
 
 
-# try:
-while(1):
-    # read sentence from command line
-    print('\nPlease Input a sentence: ', end='')
-    sentence = raw_input()
+try:
+    while(1):
+        # read sentence from command line
+        print('\nPlease Input a sentence: ', end='')
+        sentence = raw_input()
 
-    # split the sentence
-    i = 0
-    words = []
-    chs = list(sentence)
-    while i < len(chs):
-        word = ''
-        
-        if chs[i].isdigit() or chs[i].isalpha():
-            while (chs[i].isdigit() or chs[i].isalpha()) and i < len(chs):
-                word += chs[i]
-                i += 1
-            words.append(word)
-        else:
-            word += chs[i]
-            word += chs[i + 1]
-            word += chs[i + 2]
-            words.append(word)
-            i += 3
-
-    # turn words into vectors
-    X = [word_to_ids[word] if word in word_dict else word_to_ids['<unk>'] for word in words ]
-
-    # predict the result
-    intents = intent_rnn.predict_classes(X)[-1]
-    labels = label_rnn.predict_classes(X).reshape(-1)
-
-    # print the result
-    print(intent_dict[intents])
-    for i in range(labels.shape[0]):
-        print(words[i] + label_dict[labels[i]])
-
-    # repack the label into a dictionary
-    request = {
-        'function':None,
-        'board':None,
-        'title':None,
-        'author':None,
-        'content':None,
-        'comment':{'state':None,'message':None,'id':None,'date':None},
-        'push':{'all':None,'score':None,'g':None,'b':None,'n':None},
-        'date':None,
-        'ip':None
-    }
-
-    request['function'] = intent_dict[intents]
-    # print ('1')
-    # print (request)
-    i = j = 0
-    while i < labels.shape[0]:
-        label = label_dict[labels[i]]
-        if label != '<eos>' and label != '<unk>':
-            word = words[i]
-            j = i + 1
-            while label_dict[labels[j]] == label and j < labels.shape[0]:
-                word += words[j]
-                j += 1
-            i = j
-
-            if label == 'score':
-                request['push']['score'] = word
+        # split the sentence
+        i = 0
+        words = []
+        chs = list(sentence)
+        while i < len(chs):
+            word = ''
+            
+            if chs[i].isdigit() or chs[i].isalpha():
+                while (chs[i].isdigit() or chs[i].isalpha()) and i < len(chs):
+                    word += chs[i]
+                    i += 1
+                words.append(word)
             else:
-                request[label] = word
-        else:
-            i += 1
-    # print ('2')
-    # print (request)
+                word += chs[i]
+                word += chs[i + 1]
+                word += chs[i + 2]
+                words.append(word)
+                i += 3
 
-    '''
-    knowledge provider(backend database)
-    '''
-    req = keyword_translate(request, keyword_dict)
-    # print ('request' + str(request))
-    # print ('req' + str(req))
-    kp.query(req)
+        # turn words into vectors
+        X = [word_to_ids[word] if word in word_dict else word_to_ids['<unk>'] for word in words ]
 
-# except Exception as e:
-#     print (e)
-#     logging.warning('穴穴你使用我們PTTBOT，愛你 <3')
+        # predict the result
+        intents = intent_rnn.predict_classes(X)[-1]
+        labels = label_rnn.predict_classes(X).reshape(-1)
+
+        # print the result
+        print(intent_dict[intents])
+        for i in range(labels.shape[0]):
+            print(words[i] + label_dict[labels[i]])
+
+        # repack the label into a dictionary
+        request = {
+            'function':None,
+            'board':None,
+            'title':None,
+            'author':None,
+            'content':None,
+            'comment':{'state':None,'message':None,'id':None,'date':None},
+            'push':{'all':None,'score':None,'g':None,'b':None,'n':None},
+            'date':None,
+            'ip':None
+        }
+
+        request['function'] = intent_dict[intents]
+        # print ('1')
+        # print (request)
+        i = j = 0
+        while i < labels.shape[0]:
+            label = label_dict[labels[i]]
+            if label != '<eos>' and label != '<unk>':
+                word = words[i]
+                j = i + 1
+                while label_dict[labels[j]] == label and j < labels.shape[0]:
+                    word += words[j]
+                    j += 1
+                i = j
+
+                if label == 'score':
+                    request['push']['score'] = word
+                else:
+                    request[label] = word
+            else:
+                i += 1
+        # print ('2')
+        # print (request)
+
+        '''
+        knowledge provider(backend database)
+        '''
+        req = keyword_translate(request, keyword_dict)
+        # print ('request' + str(request))
+        # print ('req' + str(req))
+        kp.query(req)
+
+except Exception as e:
+    print (e)
+    logging.warning('穴穴你使用我們PTTBOT，愛你 <3')

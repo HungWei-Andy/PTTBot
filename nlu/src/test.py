@@ -34,7 +34,7 @@ try:
                 while (chs[i].isdigit() or chs[i].isalpha()) and i < len(chs):
                     word += chs[i]
                     i += 1
-                words.append(word)
+                words.append(lower(word))
             else:
                 word += chs[i]
                 word += chs[i+1]

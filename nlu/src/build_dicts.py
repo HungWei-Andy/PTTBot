@@ -7,7 +7,7 @@ def build_dict(arr, filename, eos=True, unk=True):
     cnt = Counter()
     for word in arr.reshape(-1):
         if word != '<eos>':
-            cnt[word] += 1
+            cnt[word.lower()] += 1
 
     dict_out = open(filename, 'w')
     if eos:

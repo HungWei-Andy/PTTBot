@@ -5,7 +5,7 @@ import numpy as np
 import os
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
-from keras.layers import Dense, Embedding, LSTM, Bidirectional
+from keras.layers import Dense, Embedding, LSTM, Bidirectional, TimeDistributed
 
 class Config(object):
     max_timestep = 50
@@ -13,7 +13,7 @@ class Config(object):
     intent_hidden_size = 100
     label_hidden_size = 200
     intent_epoch = 10
-    label_epoch = 30
+    label_epoch = 20
     batch_size = 256
     train_sample_num = 8200
 

@@ -1,5 +1,4 @@
 # ICBT2017
-The project of NTU ICBT2017
 
 ### Run the test
 To predict with the pre-trained model, please run run.sh directly

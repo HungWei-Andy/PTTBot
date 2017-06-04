@@ -1,2 +1,2 @@
-wget https://www.dropbox.com/s/b3anft3b5j7gapg/kp_nlu.tar.gz
+wget https://www.dropbox.com/s/sdxobskc7dp1g7i/kp_nlu.tar.gz
 tar zxvf kp_nlu.tar.gz

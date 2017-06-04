@@ -1,0 +1,143 @@
+in homepage
+[User Say]: 請幫我找版
+5/5 [==============================] - 31s
+5/5 [==============================] - 29s
+request_board
+請<unk>
+幫<eos>
+我<unk>
+找<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你是不是想找(´･ω･`)版呢<eos>
+('in query:', '\xe8\xab\x8b\xe5\xb9\xab\xe6\x88\x91\xe6\x89\xbe\xe7\x89\x88')
+[User Say]: 不是唷
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_board
+不keyword
+是<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board', 'keyword': '\xe4\xb8\x8d'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你想要找的文章是<br>
+(0) <a href="https://www.ptt.cc/bbs/sex/M.1493991540.A.CC5.html">[心得] 真的用一次就可以丟的口袋型飛機杯心得</a><br>
+(1) <a href="https://www.ptt.cc/bbs/sex/M.1493992654.A.70D.html">[創作] 挑一下啊</a><br>
+(2) <a href="https://www.ptt.cc/bbs/sex/M.1493993641.A.BFC.html">Re: [閒聊] 什麼姿勢最容易射</a><br>
+(3) <a href="https://www.ptt.cc/bbs/sex/M.1493994003.A.9B1.html">[閒聊] 美腿配冰品</a><br>
+(4) <a href="https://www.ptt.cc/bbs/sex/M.1493994255.A.C92.html">[閒聊] 約洗澡會很難嗎</a><br>
+(5) <a href="https://www.ptt.cc/bbs/sex/M.1493994773.A.9D6.html">Re: [討論] 早洩男有辦法寫出一篇好文章嗎？</a><br>
+(6) <a href="https://www.ptt.cc/bbs/sex/M.1493996920.A.45A.html">[閒聊] 臉書直播開約</a><br>
+(7) <a href="https://www.ptt.cc/bbs/sex/M.1493996933.A.C17.html">[閒聊] 所有男人ㄧ致討厭阿婆內褲嗎？有例外嗎？</a><br>
+(8) <a href="https://www.ptt.cc/bbs/sex/M.1494000011.A.297.html">[創作] 無題</a><br>
+(9) <a href="https://www.ptt.cc/bbs/sex/M.1494000017.A.0EA.html">[新聞] 大學高材生變「奶襲哥」　稱一捏就知罩杯</a><br>
+(10) <a href="https://www.ptt.cc/bbs/sex/M.1493061235.A.3BB.html">[公告] 匿名信箱暫停作業</a><br>
+(11) <a href="https://www.ptt.cc/bbs/sex/M.1493964775.A.8C7.html">[討論] 有推薦加大的保險套嗎？</a><br>
+(12) <a href="https://www.ptt.cc/bbs/sex/M.1493965225.A.69A.html">[閒聊] 請問太寬或太長是不是要看醫生矯正</a><br>
+(13) <a href="https://www.ptt.cc/bbs/sex/M.1493965870.A.8B9.html">[討論] 約炮的一百種姿態</a><br>
+(14) <a href="https://www.ptt.cc/bbs/sex/M.1493967249.A.55F.html">[新聞] 自慰都在想什麼？　一定有前男女友</a><br>
+(15) <a href="https://www.ptt.cc/bbs/sex/M.1493967810.A.144.html">[閒聊]我的肉棍有辦法對付女神棍嗎？</a><br>
+(16) <a href="https://www.ptt.cc/bbs/sex/M.1493967816.A.FF4.html">Re: [創作] 子夜二時 妳做什麼 (2)</a><br>
+(17) <a href="https://www.ptt.cc/bbs/sex/M.1493968479.A.41E.html">[閒聊] 什麼姿勢最容易射</a><br>
+(18) <a href="https://www.ptt.cc/bbs/sex/M.1493968643.A.FA9.html">Re: [討論] 早洩男有辦法寫出一篇好文章嗎？</a><br>
+(19) <a href="https://www.ptt.cc/bbs/sex/M.1493971469.A.FB5.html">Re: [討論] 早洩男有辦法寫出一篇好文章嗎？</a><br>
+<eos>
+('in query:', '\xe4\xb8\x8d\xe6\x98\xaf\xe5\x94\xb7')
+[User Say]: 我要找文章
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+request_post
+我<unk>
+要<unk>
+找<unk>
+文<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe4\xb8\x8d'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢<eos>
+('in query:', '\xe6\x88\x91\xe8\xa6\x81\xe6\x89\xbe\xe6\x96\x87\xe7\xab\xa0')
+===============
+====  Reset  ====
+===============
+('in query:', 'reset')
+[User Say]: 我要找版
+4/4 [==============================] - 0s
+4/4 [==============================] - 0s
+request_board
+我<unk>
+要<unk>
+找<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你是不是想找(´･ω･`)版呢<eos>
+('in query:', '\xe6\x88\x91\xe8\xa6\x81\xe6\x89\xbe\xe7\x89\x88')
+in homepage
+[User Say]: 請幫我找版
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+request_board
+請<unk>
+幫<eos>
+我<unk>
+找<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你是不是想找(´･ω･`)版呢<eos>
+('in query:', '\xe8\xab\x8b\xe5\xb9\xab\xe6\x88\x91\xe6\x89\xbe\xe7\x89\x88')
+in homepage
+[User Say]: 你好嗎，我很好
+7/7 [==============================] - 0s
+7/7 [==============================] - 0s
+request_post
+你<unk>
+好keyword
+嗎<unk>
+，<unk>
+我<unk>
+很<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢<eos>
+('in query:', '\xe4\xbd\xa0\xe5\xa5\xbd\xe5\x97\x8e\xef\xbc\x8c\xe6\x88\x91\xe5\xbe\x88\xe5\xa5\xbd')
+in homepage
+[User Say]: 你好！
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_post
+你<unk>
+好keyword
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:推文數想要多少呢<eos>
+('in query:', '\xe4\xbd\xa0\xe5\xa5\xbd\xef\xbc\x81')
+in homepage
+in homepage
+[User Say]: 你好不好呢
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s

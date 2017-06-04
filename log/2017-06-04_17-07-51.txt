@@ -1,0 +1,196 @@
+in homepage
+[User Say]: 我想要大便
+5/5 [==============================] - 2s
+5/5 [==============================] - 16s
+request_post
+我<unk>
+想<unk>
+要<unk>
+大<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:推文數想要多少呢<eos>
+('in query:', '\xe6\x88\x91\xe6\x83\xb3\xe8\xa6\x81\xe5\xa4\xa7\xe4\xbe\xbf')
+[User Say]: 我想找版
+4/4 [==============================] - 0s
+4/4 [==============================] - 0s
+request_board
+我<unk>
+想<unk>
+找<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你是不是想找(´･ω･`)版呢<eos>
+('in query:', '\xe6\x88\x91\xe6\x83\xb3\xe6\x89\xbe\xe7\x89\x88')
+[User Say]: 哦哦哦
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_post
+哦<unk>
+哦<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:推文數想要多少呢<eos>
+('in query:', '\xe5\x93\xa6\xe5\x93\xa6\xe5\x93\xa6')
+[User Say]: 那
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_author
+那<unk>
+[count] ->>0
+[action] ->>2
+self.states:{'function': 'request_author'}
+[function ; title ; board ; score]
+self.states_rl_input[ 1.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:文章想要有關什麼呢<eos>
+('in query:', '\xe9\x82\xa3')
+[User Say]: 都可
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_author
+都<unk>
+[count] ->>0
+[action] ->>2
+self.states:{'function': 'request_author'}
+[function ; title ; board ; score]
+self.states_rl_input[ 1.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:文章想要有關什麼呢<eos>
+('in query:', '\xe9\x83\xbd\xe5\x8f\xaf')
+[User Say]: 和八寶有關
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+inform_Noneed
+和<unk>
+八board
+寶keyword
+有<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'inform_Noneed', 'board': '\xe5\x85\xab', 'keyword': '\xe5\xaf\xb6'}
+[function ; title ; board ; score]
+self.states_rl_input[ 2.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你想要哪個版呢<eos>
+('in query:', '\xe5\x92\x8c\xe5\x85\xab\xe5\xaf\xb6\xe6\x9c\x89\xe9\x97\x9c')
+[User Say]: LoL
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+LoL<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': '\xe5\x85\xab', 'keyword': '\xe5\xaf\xb6'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:You can choose a board <eos>
+('in query:', 'LoL')
+[User Say]: LoL
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+LoL<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': '\xe5\x85\xab', 'keyword': '\xe5\xaf\xb6'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你想要哪個版呢<eos>
+('in query:', 'LoL')
+[User Say]: Sex
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+Sex<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': '\xe5\x85\xab', 'keyword': '\xe5\xaf\xb6'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:Which board would you like to search ?<eos>
+('in query:', 'Sex')
+[User Say]: 我想要Sex版
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+request_board
+我<unk>
+想<unk>
+要<unk>
+Sex<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_board', 'board': '\xe5\x85\xab', 'keyword': '\xe5\xaf\xb6'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你想要哪個版呢<eos>
+('in query:', '\xe6\x88\x91\xe6\x83\xb3\xe8\xa6\x81Sex\xe7\x89\x88')
+[User Say]: 我想要的版是sex
+7/7 [==============================] - 0s
+7/7 [==============================] - 0s
+request_post
+我<unk>
+想<unk>
+要<unk>
+的<unk>
+版<unk>
+是<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': '\xe5\x85\xab', 'keyword': '\xe5\xaf\xb6'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你想要哪個版呢<eos>
+('in query:', '\xe6\x88\x91\xe6\x83\xb3\xe8\xa6\x81\xe7\x9a\x84\xe7\x89\x88\xe6\x98\xafsex')
+[User Say]: 西斯
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+西board
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': 'sex', 'keyword': '\xe5\xaf\xb6'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你希望查詢哪個版呢<eos>
+('in query:', '\xe8\xa5\xbf\xe6\x96\xaf')
+[User Say]: 問我想要什麼文章
+8/8 [==============================] - 0s
+8/8 [==============================] - 0s
+request_post
+問<unk>
+我<unk>
+想<unk>
+要<unk>
+什<unk>
+麼keyword
+文<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': 'sex', 'keyword': '\xe9\xba\xbc'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:Which board would you like to search ?<eos>
+('in query:', '\xe5\x95\x8f\xe6\x88\x91\xe6\x83\xb3\xe8\xa6\x81\xe4\xbb\x80\xe9\xba\xbc\xe6\x96\x87\xe7\xab\xa0')
+[User Say]: 請跳出
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s

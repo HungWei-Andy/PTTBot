@@ -1,8 +1,2 @@
-#!/bin/bash
-wget https://www.dropbox.com/s/xe1omytsq37x5fm/data.zip
-
-unzip data.zip
-rm data.zip
-
-mv models nlu/
-mv database kp/
+wget https://www.dropbox.com/s/b3anft3b5j7gapg/kp_nlu.tar.gz
+tar zxvf kp_nlu.tar.gz

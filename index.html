@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to our bot!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <script  src="https://code.jquery.com/jquery-3.2.1.js"
+	     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	     crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!---->
+    <script language="javascript">
+      const SpeechRecognition = webkitSpeechRecognition;
+      const SpeechGrammarList = webkitSpeechGrammarList;
+      const SpeechRecognitionEvent = webkitSpeechRecognitionEvent;
+
+      /**
+       * you can define your own grammar list
+       */
+      // const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral' ];
+      // const grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;';
+
+      const recognition = new SpeechRecognition();
+      const speechRecognitionList = new SpeechGrammarList();
+      
+      /**
+       *  add grammars
+       *  the second parameter is a weight value that specifies the importance of this grammar 
+       *  in relation of other grammars available in the list (can be from 0 to 1 inclusive.)
+       */
+      // speechRecognitionList.addFromString(grammar, 1);
+      // recognition.grammars = speechRecognitionList;
+      
+      /**
+       * other settings
+       */
+      // recognition.lang = 'en-US';
+      recognition.lang = 'zh-TW';
+      // recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      /**
+       * event handlers
+       */
+      recognition.onresult = (e) => {
+        const result = e.results[e.results.length - 1][0].transcript;
+        console.log('result: ', result);
+        updateResult(result);
+      }
+
+      recognition.onerror = (e) => {
+        console.error(e);
+      }
+
+      recognition.onend = () => {
+        console.log('recognition end.');
+      }
+
+      /**
+       * other functions
+       */
+      function updateResult(result) {
+	$('#user_input').val(result);
+      }
+
+      function start() {
+        console.log('start recognition');
+        recognition.start();
+      }
+    </script>
+
+
+    <!-- Speech Thesis -->
+    <script language="javascript">
+      const synthesis = window.speechSynthesis;
+      const synthesisText = document.querySelector('#synthesisText');
+
+      function speak(sentence){
+        const utter = new SpeechSynthesisUtterance(sentence);
+        // the list of all available voices
+        const voices = synthesis.getVoices();
+  
+        for(i = 0; i < voices.length; ++i) {
+          if(voices[i].name === "Google 國語（臺灣）") {
+            utter.voice = voices[i];
+          }
+        }
+  
+        utter.rate = 1;
+        utter.pitch = 1;
+        synthesis.speak(utter);
+      }
+    </script>
+
+
+    <!-- ChatBot -->
+    <script language="javascript">
+      speaker_buffer = [];
+      speaker_buffer_idx = 0;
+      strs = ['我們的機器人正在思考，請等待他一下~ ヾ(＾∇＾)'];
+
+      function get_progress_bar_html(inf){
+        return ' <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%"> ' + inf + '</div></div>'
+      }
+
+      function get_speaker(sentence){
+        speaker_buffer.push(sentence);
+        idx = speaker_buffer_idx
+        speaker_buffer_idx += 1;
+        return '<input id="speak" type="image" src="http://ppt.cc/sEQGk" width="3%" onclick="speak(speaker_buffer['+idx+'])" />'
+      }
+
+      function send2chatbot(){
+        text = $('#user_input').val();
+	$('#user_input').val('');
+
+        url = "http://140.112.251.159:5555/query/" + text;
+        console.log(text);
+        console.log(url);
+
+        // append user input
+        console.log(url)
+        dialogue = $('#dialogue').html() + '<p>User: ' + text + get_speaker(text) + '</p>';
+        $('#dialogue').html(dialogue + get_progress_bar_html(strs[0]));
+        
+        // append chatbot response
+        $.get(url, function(data){
+          console.log(data);
+          chatbot_html = dialogue + '<p><strong>機器人!</strong> ' + data + get_speaker(data) +'</p>';
+          console.log(chatbot_html);
+          $('#dialogue').html(chatbot_html);
+        });
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="carousel slide" id="carousel-762403">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-762403">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-762403">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-762403">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="Carousel Bootstrap First" src="http://www.orangesv.com/wp-content/uploads/2015/01/neural-network-aficionados-ersatz-event-brain-graphic-1140x440.jpg">
+						<div class="carousel-caption">
+						</div>
+					</div>
+					<div class="item">
+						<img alt="Carousel Bootstrap Second" src="http://i.imgur.com/hV2Hnq5.png">
+						<div class="carousel-caption">
+						</div>
+					</div>
+					<div class="item">
+						<img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
+						<div class="carousel-caption">
+						</div>
+					</div>
+				</div> <a class="left carousel-control" href="#carousel-762403" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-762403" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<div class="jumbotron">
+				<h2>
+					Hello, GUY!
+				</h2>
+				<p>
+					This is a PPT-BOT.Do you need any help?
+				</p>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div id="dialogue_box" class="alert alert-success alert-dismissable">
+						<strong>機器人!</strong> 主人，你需要什麼服務嗎. <div id="dialogue"></div>
+						<input id="user_input" type="text" class="input-medium search-query"/>
+						<input id="recog" type="image" src="http://ppt.cc/kczTv" width="4%" onclick="start()"></input>
+						<button id="send" type="button" class="btn" onclick="send2chatbot()">go</button>
+                                                <p>[輸入"reset"可以重置機器人唷！]
+					</div>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<dl>
+						<dt>
+							謝仲凱
+						<dt>
+					</dl><img alt="Bootstrap Image Preview" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/p240x240/75565_1032489993492749_2055331293561094519_n.jpg?oh=0ad951c8c46dc52755b3cb24457e625f&oe=59BA5AA9" class="img-circle">
+				</div>
+				<div class="col-md-3">
+					<dl>
+						<dt>
+							許宏瑋
+						</dt>
+					</dl><img alt="Bootstrap Image Preview" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/p240x240/16508629_1423811434348957_3389712284603514900_n.jpg?oh=83412f7f0f6eee54f0a0c8560f9a537a&oe=59B812F0" class="img-circle">
+				</div>
+				<div class="col-md-3">
+					<dl>
+						<dt>
+							游肇輝
+						</dt>
+					</dl><img alt="Bootstrap Image Preview" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/p240x240/15621788_1148820735214925_3532323377401265816_n.jpg?oh=d0949a127f453c662492e401b2854c34&oe=5980BDD2" class="img-circle">
+				</div>
+				<div class="col-md-3">
+					<dl>
+						<dt>
+							鄭培淳
+						</dt>
+					</dl><img alt="Bootstrap Image Preview" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/c50.50.619.619/s240x240/600984_382974335099334_1394295018_n.jpg?oh=8c0a61a1ad1aa061c2177f5626a62e4c&oe=59BAAF6B" class="img-circle">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+  </body>
+</html>

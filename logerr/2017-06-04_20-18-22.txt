@@ -1,0 +1,19 @@
+[2017-06-05 04:22:50,646] ERROR in app: Exception on /query/`3000`3 [GET]
+Traceback (most recent call last):
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "runserver.py", line 34, in query
+    res = pttbot.process(sentence)
+  File "/home/andy/PTTBot/agent_server.py", line 164, in process
+    self.request = nlu2req(sentence)
+  File "/home/andy/PTTBot/agent_server.py", line 357, in nlu2req
+    word += chs[i + 2]
+IndexError: list index out of range

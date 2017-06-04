@@ -1,0 +1,34 @@
+[2017-06-05 00:46:13,224] ERROR in app: Exception on /query/我想大便 [GET]
+Traceback (most recent call last):
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "runserver.py", line 30, in query
+    res = pttbot.process(sentence)
+  File "/home/andy/PTTBot/agent_server.py", line 176, in process
+    print('[action] ->>' + str(action))
+UnboundLocalError: local variable 'action' referenced before assignment
+[2017-06-05 00:46:13,762] ERROR in app: Exception on /query/幫我找版 [GET]
+Traceback (most recent call last):
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andy/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "runserver.py", line 30, in query
+    res = pttbot.process(sentence)
+  File "/home/andy/PTTBot/agent_server.py", line 176, in process
+    print('[action] ->>' + str(action))
+UnboundLocalError: local variable 'action' referenced before assignment

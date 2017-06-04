@@ -1,0 +1,6 @@
+gym>=0.9.1
+keras-rl
+tensorflow>=1.0.0
+keras>=2.0.2
+h5py>=2.6.0
+pandas>=0.13.1

@@ -1,0 +1,204 @@
+in homepage
+[User Say]: 你好
+2/2 [==============================] - 2s
+2/2 [==============================] - 1s
+request_post
+你<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe4\xbd\xa0\xe5\xa5\xbd')
+[User Say]: 推文數要大於10
+7/7 [==============================] - 0s
+7/7 [==============================] - 0s
+request_post
+推<unk>
+文<unk>
+數<unk>
+要<unk>
+大<unk>
+於<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'push': {'score': '10'}, 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  1.]
+self.filtered_posts:0
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe6\x8e\xa8\xe6\x96\x87\xe6\x95\xb8\xe8\xa6\x81\xe5\xa4\xa7\xe6\x96\xbc10')
+[User Say]: 大於爆
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_post
+大<unk>
+於<unk>
+100
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'push': {'score': 100}, 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  1.]
+self.filtered_posts:250
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe5\xa4\xa7\xe6\x96\xbc\xe7\x88\x86')
+===============
+====  Reset  ====
+===============
+('in query:', 'reset')
+[User Say]: 幫我找文章
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+request_post
+幫<eos>
+我<unk>
+找<unk>
+文<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe5\xb9\xab\xe6\x88\x91\xe6\x89\xbe\xe6\x96\x87\xe7\xab\xa0')
+[User Say]: 都可以
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_board
+都<unk>
+可<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你是不是想找(´･ω･`)版呢
+('in query:', '\xe9\x83\xbd\xe5\x8f\xaf\xe4\xbb\xa5')
+[User Say]: 不是
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+inform_Noneed
+不keyword
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'inform_Noneed', 'keyword': '\xe4\xb8\x8d'}
+[function ; title ; board ; score]
+self.states_rl_input[ 2.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:想要文章推文數大於多少呢
+('in query:', '\xe4\xb8\x8d\xe6\x98\xaf')
+[User Say]: 想要文章推文數大於爆
+10/10 [==============================] - 0s
+10/10 [==============================] - 0s
+request_post
+想<unk>
+要<unk>
+文<unk>
+章<unk>
+推<unk>
+文<unk>
+數<unk>
+大<unk>
+於<unk>
+100
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'push': {'score': 100}, 'keyword': '\xe4\xb8\x8d'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  1.]
+self.filtered_posts:250
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe6\x83\xb3\xe8\xa6\x81\xe6\x96\x87\xe7\xab\xa0\xe6\x8e\xa8\xe6\x96\x87\xe6\x95\xb8\xe5\xa4\xa7\xe6\x96\xbc\xe7\x88\x86')
+[User Say]: `3000`3
+in homepage
+[User Say]: 幫我找版
+4/4 [==============================] - 0s
+4/4 [==============================] - 0s
+request_board
+幫<eos>
+我<unk>
+找<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_board', 'push': {'score': 100}, 'keyword': '\xe4\xb8\x8d'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  1.]
+self.filtered_posts:250
+[ChatBot Say :]:想要文章推文數大於多少呢
+('in query:', '\xe5\xb9\xab\xe6\x88\x91\xe6\x89\xbe\xe7\x89\x88')
+===============
+====  Reset  ====
+===============
+('in query:', 'reset')
+[User Say]: 我要大便
+4/4 [==============================] - 0s
+4/4 [==============================] - 0s
+request_post
+我<unk>
+要<unk>
+大<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe6\x88\x91\xe8\xa6\x81\xe5\xa4\xa7\xe4\xbe\xbf')
+[User Say]: 都可以拉
+4/4 [==============================] - 0s
+4/4 [==============================] - 0s
+request_post
+都<unk>
+可<unk>
+以<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe6\x8b\x89'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe9\x83\xbd\xe5\x8f\xaf\xe4\xbb\xa5\xe6\x8b\x89')
+===============
+====  Reset  ====
+===============
+('in query:', 'reset')
+[User Say]: 你媽媽的勒
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+request_post
+你<unk>
+媽keyword
+媽keyword
+的<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xaa\xbd\xe5\xaa\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:推文數想要多少呢
+('in query:', '\xe4\xbd\xa0\xe5\xaa\xbd\xe5\xaa\xbd\xe7\x9a\x84\xe5\x8b\x92')
+[User Say]: 都可以
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_board
+都<unk>
+可<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board', 'keyword': '\xe5\xaa\xbd\xe5\xaa\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你是不是想找(´･ω･`)版呢
+('in query:', '\xe9\x83\xbd\xe5\x8f\xaf\xe4\xbb\xa5')
+[User Say]: 不是
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s

@@ -1,0 +1,316 @@
+in homepage
+[User Say]: 我要找版
+4/4 [==============================] - 0s
+4/4 [==============================] - 0s
+request_board
+我<unk>
+要<unk>
+找<unk>
+[count] ->>0
+[action] ->>4
+self.states:{'function': 'request_board'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你想要找的文章是<br>
+(0) <a href="https://www.ptt.cc/bbs/sex/M.1493991540.A.CC5.html">[心得] 真的用一次就可以丟的口袋型飛機杯心得</a><br>
+(1) <a href="https://www.ptt.cc/bbs/sex/M.1493992654.A.70D.html">[創作] 挑一下啊</a><br>
+(2) <a href="https://www.ptt.cc/bbs/sex/M.1493993641.A.BFC.html">Re: [閒聊] 什麼姿勢最容易射</a><br>
+(3) <a href="https://www.ptt.cc/bbs/sex/M.1493994003.A.9B1.html">[閒聊] 美腿配冰品</a><br>
+(4) <a href="https://www.ptt.cc/bbs/sex/M.1493994255.A.C92.html">[閒聊] 約洗澡會很難嗎</a><br>
+(5) <a href="https://www.ptt.cc/bbs/sex/M.1493994773.A.9D6.html">Re: [討論] 早洩男有辦法寫出一篇好文章嗎？</a><br>
+(6) <a href="https://www.ptt.cc/bbs/sex/M.1493996920.A.45A.html">[閒聊] 臉書直播開約</a><br>
+(7) <a href="https://www.ptt.cc/bbs/sex/M.1493996933.A.C17.html">[閒聊] 所有男人ㄧ致討厭阿婆內褲嗎？有例外嗎？</a><br>
+(8) <a href="https://www.ptt.cc/bbs/sex/M.1494000011.A.297.html">[創作] 無題</a><br>
+(9) <a href="https://www.ptt.cc/bbs/sex/M.1494000017.A.0EA.html">[新聞] 大學高材生變「奶襲哥」　稱一捏就知罩杯</a><br>
+(10) <a href="https://www.ptt.cc/bbs/sex/M.1493061235.A.3BB.html">[公告] 匿名信箱暫停作業</a><br>
+(11) <a href="https://www.ptt.cc/bbs/sex/M.1493964775.A.8C7.html">[討論] 有推薦加大的保險套嗎？</a><br>
+(12) <a href="https://www.ptt.cc/bbs/sex/M.1493965225.A.69A.html">[閒聊] 請問太寬或太長是不是要看醫生矯正</a><br>
+(13) <a href="https://www.ptt.cc/bbs/sex/M.1493965870.A.8B9.html">[討論] 約炮的一百種姿態</a><br>
+(14) <a href="https://www.ptt.cc/bbs/sex/M.1493967249.A.55F.html">[新聞] 自慰都在想什麼？　一定有前男女友</a><br>
+(15) <a href="https://www.ptt.cc/bbs/sex/M.1493967810.A.144.html">[閒聊]我的肉棍有辦法對付女神棍嗎？</a><br>
+(16) <a href="https://www.ptt.cc/bbs/sex/M.1493967816.A.FF4.html">Re: [創作] 子夜二時 妳做什麼 (2)</a><br>
+(17) <a href="https://www.ptt.cc/bbs/sex/M.1493968479.A.41E.html">[閒聊] 什麼姿勢最容易射</a><br>
+(18) <a href="https://www.ptt.cc/bbs/sex/M.1493968643.A.FA9.html">Re: [討論] 早洩男有辦法寫出一篇好文章嗎？</a><br>
+(19) <a href="https://www.ptt.cc/bbs/sex/M.1493971469.A.FB5.html">Re: [討論] 早洩男有辦法寫出一篇好文章嗎？</a><br>
+
+('in query:', '\xe6\x88\x91\xe8\xa6\x81\xe6\x89\xbe\xe7\x89\x88')
+[User Say]: 好耶
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+好keyword
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe5\xa5\xbd\xe8\x80\xb6')
+in homepage
+[User Say]: 你說呢
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_post
+你<unk>
+說<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:要大於多少推文數呢
+('in query:', '\xe4\xbd\xa0\xe8\xaa\xaa\xe5\x91\xa2')
+in homepage
+in homepage
+[User Say]: 你好
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+你<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:想要文章推文數大於多少呢
+('in query:', '\xe4\xbd\xa0\xe5\xa5\xbd')
+[User Say]: 100
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_author
+100board
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_author', 'board': '100100', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 1.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你想要哪個版呢
+('in query:', '100')
+[User Say]: LoL
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+LoL<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': '100100', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:Which board would you like to search ?
+('in query:', 'LoL')
+[User Say]: 我想找LoL版
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+request_board
+我<unk>
+想<unk>
+找<unk>
+LoL<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_board', 'board': '100100', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你希望查詢哪個版呢
+('in query:', '\xe6\x88\x91\xe6\x83\xb3\xe6\x89\xbeLoL\xe7\x89\x88')
+[User Say]: 我想找西斯版
+6/6 [==============================] - 0s
+6/6 [==============================] - 0s
+request_board
+我<unk>
+想<unk>
+找<unk>
+西board
+斯board
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_board', 'board': 'sex', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  1.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你想要哪個版呢
+('in query:', '\xe6\x88\x91\xe6\x83\xb3\xe6\x89\xbe\xe8\xa5\xbf\xe6\x96\xaf\xe7\x89\x88')
+[User Say]: 我要找版
+4/4 [==============================] - 0s
+4/4 [==============================] - 0s
+request_board
+我<unk>
+要<unk>
+找<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_board', 'board': 'sex', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  1.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:You can choose a board 
+('in query:', '\xe6\x88\x91\xe8\xa6\x81\xe6\x89\xbe\xe7\x89\x88')
+===============
+====  Reset  ====
+===============
+('in query:', 'reset')
+in homepage
+in homepage
+in homepage
+[User Say]: 我什麼都不需要
+7/7 [==============================] - 0s
+7/7 [==============================] - 0s
+request_post
+我<unk>
+什<unk>
+麼keyword
+都<unk>
+不keyword
+需<unk>
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe4\xb8\x8d'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:想要文章推文數大於多少呢
+('in query:', '\xe6\x88\x91\xe4\xbb\x80\xe9\xba\xbc\xe9\x83\xbd\xe4\xb8\x8d\xe9\x9c\x80\xe8\xa6\x81')
+[User Say]: 100好了
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+inform_push
+100board
+好keyword
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'inform_push', 'board': '100', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 5.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你希望查詢哪個版呢
+('in query:', '100\xe5\xa5\xbd\xe4\xba\x86')
+[User Say]: 西斯
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+西board
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': 'sex', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:You can choose a board 
+('in query:', '\xe8\xa5\xbf\xe6\x96\xaf')
+[User Say]: 我想選西斯版
+6/6 [==============================] - 0s
+6/6 [==============================] - 0s
+request_board
+我<unk>
+想<unk>
+選keyword
+西board
+斯board
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_board', 'board': 'sex', 'keyword': '\xe9\x81\xb8'}
+[function ; title ; board ; score]
+self.states_rl_input[ 4.  0.  1.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你想要哪個版呢
+('in query:', '\xe6\x88\x91\xe6\x83\xb3\xe9\x81\xb8\xe8\xa5\xbf\xe6\x96\xaf\xe7\x89\x88')
+[User Say]: 我要找文章
+5/5 [==============================] - 0s
+5/5 [==============================] - 0s
+request_post
+我<unk>
+要<unk>
+找<unk>
+文<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': 'sex', 'keyword': '\xe9\x81\xb8'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:你想要哪個版呢
+('in query:', '\xe6\x88\x91\xe8\xa6\x81\xe6\x89\xbe\xe6\x96\x87\xe7\xab\xa0')
+===============
+====  Reset  ====
+===============
+('in query:', 'reset')
+[User Say]: 你好嗎
+3/3 [==============================] - 0s
+3/3 [==============================] - 0s
+request_post
+你<unk>
+好keyword
+[count] ->>0
+[action] ->>3
+self.states:{'function': 'request_post', 'keyword': '\xe5\xa5\xbd'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  0.  0.]
+self.filtered_posts:4845
+[ChatBot Say :]:想要文章推文數大於多少呢
+('in query:', '\xe4\xbd\xa0\xe5\xa5\xbd\xe5\x97\x8e')
+[User Say]: 文章推文術要大於100
+9/9 [==============================] - 0s
+9/9 [==============================] - 0s
+request_author
+文<unk>
+章<unk>
+推<unk>
+文<unk>
+術keyword
+要<unk>
+大<unk>
+於<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_author', 'board': '100', 'keyword': '\xe8\xa1\x93'}
+[function ; title ; board ; score]
+self.states_rl_input[ 1.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你希望查詢哪個版呢
+('in query:', '\xe6\x96\x87\xe7\xab\xa0\xe6\x8e\xa8\xe6\x96\x87\xe8\xa1\x93\xe8\xa6\x81\xe5\xa4\xa7\xe6\x96\xbc100')
+[User Say]: LoL
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s
+request_post
+LoL<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': '100', 'keyword': '\xe8\xa1\x93'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你希望查詢哪個版呢
+('in query:', 'LoL')
+[User Say]: 我要在LoL版中查詢
+8/8 [==============================] - 0s
+8/8 [==============================] - 0s
+request_post
+我<unk>
+要<unk>
+在<unk>
+LoL<unk>
+版<unk>
+中keyword
+查<unk>
+[count] ->>0
+[action] ->>1
+self.states:{'function': 'request_post', 'board': '100', 'keyword': '\xe4\xb8\xad'}
+[function ; title ; board ; score]
+self.states_rl_input[ 3.  0.  1.  0.]
+self.filtered_posts:0
+[ChatBot Say :]:你希望查詢哪個版呢
+('in query:', '\xe6\x88\x91\xe8\xa6\x81\xe5\x9c\xa8LoL\xe7\x89\x88\xe4\xb8\xad\xe6\x9f\xa5\xe8\xa9\xa2')
+===============
+====  Reset  ====
+===============
+('in query:', 'reset')
+[User Say]: ssdfsd
+2/2 [==============================] - 0s
+2/2 [==============================] - 0s

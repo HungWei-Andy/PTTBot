@@ -1,5 +1,4 @@
 # ICBT2017: PTTBot2
-The project of NTU ICBT2017
 
 * [Requirements](#requirements)
 * [Usage](#usage)

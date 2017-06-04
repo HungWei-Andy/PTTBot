@@ -1,7 +1,6 @@
 # ICBT2017: PTTBot2
 The project of NTU ICBT2017
 
-# PyMDNet
 * [Requirements](#requirements)
 * [Usage](#usage)
 

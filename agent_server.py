@@ -195,7 +195,6 @@ class PTTBot(object):
         print('===============')
         print('====  Reset  ====')
         print('===============')
-        self._seed()
         self.request = self.state_init
         self.states =  {}
         self.states_rl_input = self.np_random.uniform(low=-0.05, high=0.05, size=(self.nb_states ,))

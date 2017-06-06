@@ -77,6 +77,15 @@ class Env_PTTBot(gym.Env):
         self._seed()
         self.viewer = None
         self.function_dict = {'inform_title': 0, 'request_author':1,'inform_Noneed':2,'request_post':3,'request_board':4,'inform_push':5,'inform_board':6}
+
+
+
+
+
+
+
+  
+
         self.states = {}
         self.states_rl_input = None
         self.filtered_posts = []

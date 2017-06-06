@@ -14,7 +14,7 @@ class Config(object):
   input_size = 256
   max_grad_norm = 5
   batch_size = 20
-  epochs = 2000
+  epochs = 10000
   lr = 0.01
   noise_scale = 0.1
 

@@ -178,17 +178,22 @@ class user_semantic:
         def Give_reward(self,state,action):
             #self.turn++
             self.turn+=1
-            if self.turn>=8:
+            if self.turn>=5:
                 self.done=1
 
 
             reward=0
             if action ==self.pre_action:
                 reward-=.5
+            else:
+                reward+=.1
 
             self.pre_action=action
 
             if self.find=='版':  
+                if action==4:
+                        self.done=1
+
                 self.success_rate=0
                 if 'function' in state and state['function']=='request_board':
                     self.success_rate+=.5
@@ -214,8 +219,7 @@ class user_semantic:
                             reward-=1
                 else:  
                     reward=self.Reward_request_board(action)
-                    if action==4:
-                        self.done=1
+                   
 
 
                 self.dialogue_reward+=reward
@@ -223,6 +227,8 @@ class user_semantic:
 
             if self.find=='文章':
                 self.success_rate=0
+                if action==5 or action==6:
+                    self.done=1
 
                 if 'function' in state and state['function']=='request_post':
                     self.success_rate+=.25
